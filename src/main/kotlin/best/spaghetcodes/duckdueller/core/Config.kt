@@ -155,7 +155,7 @@ class Config : Vigilant(File(DuckDueller.configLocation), sortingBehavior = Conf
         name = "Max Attack Distance",
         description = "How close the opponent has to be before the bot starts attacking them",
         category = "Combat",
-        min = 5,
+        min = 3,
         max = 15,
         increment = 1
     )
@@ -179,7 +179,7 @@ class Config : Vigilant(File(DuckDueller.configLocation), sortingBehavior = Conf
         description = "AutoGG message the bot sends after every game",
         category = "AutoGG",
     )
-    val ggMessage = "gg"
+    val ggMessage = "gg <3"
 
     @Property(
         type = PropertyType.NUMBER,
