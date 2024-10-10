@@ -30,7 +30,7 @@ object StateManager {
         } else if (unformatted.contains("Opponent:")) {
             state = States.PLAYING
             gameStartedAt = System.currentTimeMillis()
-        } else if (unformatted.contains("Accuracy")) {
+        } else if (unformatted.contains("Damage dealt")) {
             state = States.GAME
             gameFull = false
             lastGameDuration = System.currentTimeMillis() - gameStartedAt
