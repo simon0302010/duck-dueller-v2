@@ -367,11 +367,9 @@ open class BotBase(val queueCommand: String, val quickRefresh: Int = 10000) {
                     "gotta stop if you ask so nicely",
                     "ima rejoin..."
                 )
-                TimeUtils.setTimeout(fun () {
-                    ChatUtils.sendAsPlayer(responses.random())
-                    disconnect()
-                    TimeUtils.setTimeout(this::reconnect, RandomUtils.randomIntInRange(4000, 5000))
-                }, RandomUtils.randomIntInRange(2000, 3000))
+                ChatUtils.sendAsPlayer(responses.random())
+                disconnect()
+                TimeUtils.setTimeout(this::reconnect, RandomUtils.randomIntInRange(4000, 5000))
             }
 
             if (unformatted.contains("hax") || unformatted.contains("hack") || unformatted.contains("bot") || unformatted.contains("cheat") || unformatted.contains("annoying") || unformatted.contains("report") || unformatted.contains("telling")) {
