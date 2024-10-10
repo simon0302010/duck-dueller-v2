@@ -324,7 +324,6 @@ open class BotBase(val queueCommand: String, val quickRefresh: Int = 10000) {
     fun onChat(ev: ClientChatReceivedEvent) {
         val unformatted = ev.message.unformattedText
         if (toggled() && mc.thePlayer != null) {
-
             if (unformatted.contains("The game starts in 2 seconds!")) {
                 println(playersSent.joinToString(", "))
                 var found = false
@@ -340,9 +339,9 @@ open class BotBase(val queueCommand: String, val quickRefresh: Int = 10000) {
 
                 if (!found && DuckDueller.config?.dodgeNoStats == true) {
                     ChatUtils.info("No stats found")
-                    // leaveGame()
-                    // sendDodgeWebhook("")
-                    // TimeUtils.setTimeout(this::joinGame, RandomUtils.randomIntInRange(4000, 6000))
+            //         leaveGame()
+            //         sendDodgeWebhook("")
+            //         TimeUtils.setTimeout(this::joinGame, RandomUtils.randomIntInRange(4000, 6000))
                 }
             } else if (unformatted.contains("The game starts in 1 second!")) {
                 beforeStart()
@@ -354,6 +353,33 @@ open class BotBase(val queueCommand: String, val quickRefresh: Int = 10000) {
 
             if (unformatted.contains("Opponent:")) {
                 gameStart()
+            }
+
+            if (unformatted.lowercase().contains("gl") && unformatted.lowercase().contains("hf")) {
+                ChatUtils.sendAsPlayer("u2 :)")
+            }
+
+            if (unformatted.lowercase().contains("stop")) {
+                val responses = listOf(
+                    "i will give you the win this time <3",
+                    "my internet is going down, bye ;)",
+                    "wait, dad, no, that's the wrong cable!",
+                    "gotta stop if you ask so nicely",
+                    "ima rejoin..."
+                )
+                TimeUtils.setTimeout(fun () {
+                    ChatUtils.sendAsPlayer(responses.random())
+                    disconnect()
+                    TimeUtils.setTimeout(this::reconnect, RandomUtils.randomIntInRange(4000, 5000))
+                }, RandomUtils.randomIntInRange(2000, 3000))
+            }
+
+            if (unformatted.contains("hax") || unformatted.contains("hack") || unformatted.contains("bot") || unformatted.contains("cheat") || unformatted.contains("annoying") || unformatted.contains("report") || unformatted.contains("telling")) {
+                TimeUtils.setTimeout(fun () {
+                    ChatUtils.sendAsPlayer("bet you've reported thousands of legit players already. anyways, ima leave so you can tell your homies you won against a 'hacker'.")
+                }, RandomUtils.randomIntInRange(5000, 6000))
+                disconnect()
+                TimeUtils.setTimeout(this::joinGame, RandomUtils.randomIntInRange(7000, 8000))
             }
 
             if (unformatted.contains("Accuracy") && !calledGameEnd) {
