@@ -382,7 +382,7 @@ open class BotBase(val queueCommand: String, val quickRefresh: Int = 10000) {
                 TimeUtils.setTimeout(this::joinGame, RandomUtils.randomIntInRange(7000, 8000))
             }
 
-            if (unformatted.contains("Accuracy") && !calledGameEnd) {
+            if (unformatted.contains("Damage Dealt") && !calledGameEnd) {
                 calledGameEnd = true
                 gameEnd()
             }
