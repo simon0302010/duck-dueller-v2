@@ -375,9 +375,7 @@ open class BotBase(val queueCommand: String, val quickRefresh: Int = 10000) {
             }
 
             if (unformatted.contains("hax") || unformatted.contains("hack") || unformatted.contains("bot") || unformatted.contains("cheat") || unformatted.contains("annoying") || unformatted.contains("report") || unformatted.contains("telling")) {
-                TimeUtils.setTimeout(fun () {
-                    ChatUtils.sendAsPlayer("bet you've reported thousands of legit players already. anyways, ima leave so you can tell your homies you won against a 'hacker'.")
-                }, RandomUtils.randomIntInRange(5000, 6000))
+                ChatUtils.sendAsPlayer("bet you've reported thousands of legit players already. anyways, ima leave so you can tell your homies you won against a 'hacker'.")
                 disconnect()
                 TimeUtils.setTimeout(this::joinGame, RandomUtils.randomIntInRange(7000, 8000))
             }
