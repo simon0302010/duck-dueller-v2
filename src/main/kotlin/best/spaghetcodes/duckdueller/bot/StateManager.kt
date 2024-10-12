@@ -1,6 +1,9 @@
 package best.spaghetcodes.duckdueller.bot
 
+import best.spaghetcodes.duckdueller.bot.player.*
+import best.spaghetcodes.duckdueller.utils.*
 import best.spaghetcodes.duckdueller.DuckDueller
+import best.spaghetcodes.duckdueller.core.KeyBindings
 import net.minecraftforge.client.event.ClientChatReceivedEvent
 import net.minecraftforge.event.entity.EntityJoinWorldEvent
 import net.minecraftforge.fml.common.eventhandler.EventPriority
