@@ -155,7 +155,7 @@ class Config : Vigilant(File(DuckDueller.configLocation), sortingBehavior = Conf
         name = "Max Attack Distance",
         description = "How close the opponent has to be before the bot starts attacking them",
         category = "Combat",
-        min = 3,
+        min = 5,
         max = 15,
         increment = 1
     )
