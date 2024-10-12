@@ -1,4 +1,4 @@
-![example event parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?event=push)
+![Build Status](https://github.com/simon0302010/duck-dueller-v2/actions/workflows/gradle.yml/badge.svg)
 
 ![alt](https://raw.githubusercontent.com/HumanDuck23/upload-stuff-here/main/DuckDuellerBanner.png)
 
