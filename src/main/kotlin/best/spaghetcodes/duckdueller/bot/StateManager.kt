@@ -30,6 +30,10 @@ object StateManager {
         } else if (unformatted.contains("Opponent:")) {
             state = States.PLAYING
             gameStartedAt = System.currentTimeMillis()
+        } else if (DuckDueller.config?.paperRequeue == true && Inventory.setInvItem("paper")) {
+            state = States.GAME
+            gameFull = false
+            lastGameDuration = System.currentTimeMillis() - gameStartedAt
         } else if (unformatted.lowercase().contains("overall winstreak")) {
             state = States.GAME
             gameFull = false
