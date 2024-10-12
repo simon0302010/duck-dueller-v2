@@ -40,6 +40,7 @@ Duck Dueller is a free and open-source Hypixel Duels bot, designed to work for F
 - ✅ Hidden from modlist sent to Hypixel
 - ✅ Discord Webhook Integration
 - ✅ Highly Customizable :D
+- ✅ Give excuses and leave game when accused of cheating
 
 <h2 align="center">
    Are there any known issues?
