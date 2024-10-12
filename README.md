@@ -1,3 +1,5 @@
+![build](https://github.com/github/docs/actions/workflows/gradle.yml/badge.svg)
+
 ![alt](https://raw.githubusercontent.com/HumanDuck23/upload-stuff-here/main/DuckDuellerBanner.png)
 
 <h3 align="center" style="color: #ff4949">
