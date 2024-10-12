@@ -382,9 +382,16 @@ open class BotBase(val queueCommand: String, val quickRefresh: Int = 10000) {
                 TimeUtils.setTimeout(this::joinGame, RandomUtils.randomIntInRange(7000, 8000))
             }
 
-            if (unformatted.lowercase().contains("overall winstreak") && !calledGameEnd) {
-                calledGameEnd = true
-                gameEnd()
+            if (toggled() && mc.thePlayer != null) {
+                if (DuckDueller.config?.paperRequeue == true && Inventory.setInvItem("paper")) {
+                    if (!calledGameEnd) {
+                        calledGameEnd = true
+                        gameEnd()
+                    }
+                } else if (unformatted.lowercase().contains("overall winstreak") && !calledGameEnd) {
+                    calledGameEnd = true
+                    gameEnd()
+                }
             }
 
             // Failsafe
