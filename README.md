@@ -29,12 +29,12 @@ Duck Dueller is a free and open-source Hypixel Duels bot, designed to work for F
    What features does it have?
 </h2>
 
-- ✅ Queue Dodging
+- 🚧 Queue Dodging
 - ✅ Smart Aim
 - ✅ Smart Strafe
 - ✅ Edge Detection
 - ✅ W-Tap
-- ✅ Pre-Game Movement (Sumo only for now, sorry!)
+- 🚧 Pre-Game Movement (Sumo only for now, sorry!)
 - ✅ Bow & rod usage
 - ✅ Many failsafes
 - ✅ Hidden from modlist sent to Hypixel
